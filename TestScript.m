@@ -28,13 +28,12 @@ color=[1 0 0];
 writerObj = VideoWriter('original_data','MPEG-4'); % Name it.
 writerObjFilter = VideoWriter('filtered_data','MPEG-4'); % Name it.
 writerObjFilter.FrameRate=10;
-writerObj.FrameRate = 10; % How many frames per second.
+writerObj.FrameRate = 10;
 open(writerObj);
 open(writerObjFilter);
 
 for i=1:steps 
 [Cloud,Intensity]= SimulatedData(upper_bound_x,lower_bound_x,upper_bound_y,lower_bound_y,upper_noise_x,upper_noise_y,upper_depth,actual_points,noisy_points,start,intensity_actual,intensity_noise);
-% [Cloud,Intensity]=discard(Cloud,k,thres,Intensity);
 fraction=Intensity./max(Intensity);
 scatter3(Cloud(1,:),Cloud(3,:),Cloud(2,:),[],color.*fraction,'filled');hold on;
 axis([-4 4 0 100 -10 10])
