@@ -1,4 +1,4 @@
-# FlyingPixelsRemoval
+# Flying-Pixels-Removal
 
 The current repository deals with the flying pixels problem which is a trivial concept for time of flight (ToF) cameras. 
 The folder contains 3 scripts.
